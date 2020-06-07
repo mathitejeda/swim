@@ -12,7 +12,7 @@ int main(int argc, char* args[]) {
 	SDL_Window* window = NULL;
 	SDL_Surface* screen_surface = NULL;
 	
-	if (SDL_Init(SDL_INIT_VIDEO) < 0) std::cout << "No se pudo inicializar SDL. " << SDL_GetError();
+
 
 	else {
 		window = SDL_CreateWindow("Swim!", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
