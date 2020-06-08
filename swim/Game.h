@@ -14,12 +14,13 @@ public:
     void handle_events();
     void update();
     void render();
-    void clear();
-    bool running();
+    void clean();
+    bool running() { return is_running; }
 
 protected:
 
 private:
+    int cnt = 0;
     bool is_running;
     SDL_Window* window = NULL;
     SDL_Renderer* renderer=NULL;
