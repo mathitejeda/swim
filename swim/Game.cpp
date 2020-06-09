@@ -1,4 +1,8 @@
 #include "Game.h"
+#include "texture_manager.h"
+#include "game_object.h"
+
+game_object* torti;
 
 game::game()
 {
@@ -29,6 +33,7 @@ void game::init(const char* title, int xpos, int ypos, int widght, int height, b
 
 	else is_running = false;
 
+		torti = new game_object("assets/torti/torti_static.png", renderer,0,0);
 }
 
 void game::handle_events()
@@ -50,14 +55,13 @@ void game::handle_events()
 
 void game::update()
 {
-	cnt++;
-	std::cout << cnt << std::endl;
+	torti->update();
 }
 
 void game::render()
 {
 	SDL_RenderClear(renderer);
-
+	torti->render();
 	//agregar cosas
 	SDL_RenderPresent(renderer);
 }
